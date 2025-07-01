@@ -121,19 +121,24 @@ jobs:
       # Step 9: Commit only the translated article to auto-translate branch (do not commit raw/)
       - name: Commit translated article to auto-translate branch
         run: |
-          if [ -d "./articles/_tmp/" ]; then
-            rm -rf ./articles/_tmp/
-          fi
-
           MARKDOWN_FILE="${{ steps.fetch-webpage-to-markdown.outputs.markdown_file_path }}"
           FILENAME=$(basename "$MARKDOWN_FILE")
           LANG=${{ steps.extract-lang.outputs.lang }}
           TRANSLATED_FILE="./articles/$LANG/$FILENAME"
 
-          # Only add the translated file
-          git add "$TRANSLATED_FILE"
-          git commit -m "Save auto-translated article markdown."
-          git push origin auto-translate
+          if [ -f "$TRANSLATED_FILE" ]; then
+            git add "$TRANSLATED_FILE"
+            git commit -m "Save auto-translated article markdown."
+
+            for i in 1 2 3; do
+              git pull --rebase origin auto-translate && git push origin auto-translate && break
+              echo "Retrying push to auto-translate ($i)..."
+              sleep 5
+            done
+          else
+            echo "Translated file not found: $TRANSLATED_FILE"
+            exit 1
+          fi
 
       # Step 10: Clean temporary directory from main branch again (after switching back)
       - name: Final cleanup of _tmp on main
@@ -144,11 +149,16 @@ jobs:
 
           if [ -d "$TMP_DIR" ]; then
             rm -rf "$TMP_DIR"
-            # Only try to add if anything was staged
+
             if git ls-files --deleted -- "$TMP_DIR" | grep -q .; then
               git add "$TMP_DIR" || true
               git commit -m "Remove _tmp directory."
-              git push origin main
+
+              for i in 1 2 3; do
+                git pull --rebase origin main && git push origin main && break
+                echo "Retrying push to main ($i)..."
+                sleep 5
+              done
             else
               echo "No changes to commit after removing _tmp."
             fi
