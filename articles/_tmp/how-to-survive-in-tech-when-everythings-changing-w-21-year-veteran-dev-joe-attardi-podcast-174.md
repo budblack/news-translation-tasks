@@ -1,7 +1,7 @@
 ---
 title: "How to Survive in Tech When Everything's Changing w/ 21-year Veteran Dev
   Joe Attardi [Podcast #174]"
-date: 2025-07-15T14:05:02.628Z
+date: 2025-07-15T14:13:21.302Z
 author: Beau Carnes
 authorURL: https://www.freecodecamp.org/news/author/beaucarnes/
 originalURL: https://www.freecodecamp.org/news/how-to-survive-in-tech-when-everythings-changing-w-21-year-veteran-dev-joe-attardi-podcast-174/
