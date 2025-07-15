@@ -1,49 +1,48 @@
----
-title: "How to Survive in Tech When Everything's Changing w/ 21-year Veteran Dev
-  Joe Attardi [Podcast #174]"
-date: 2025-07-15T14:05:02.628Z
-author: Beau Carnes
+```markdown
+title: "Як вижити в технічній сфері, коли все змінюється з 21-річним ветеранним розробником Джо Атарді [Подкаст #174]"
+date: 2025-07-15T14:13:21.302Z
+author: Бо Карнес
 authorURL: https://www.freecodecamp.org/news/author/beaucarnes/
 originalURL: https://www.freecodecamp.org/news/how-to-survive-in-tech-when-everythings-changing-w-21-year-veteran-dev-joe-attardi-podcast-174/
 posteditor: ""
 proofreader: ""
 ---
 
-On this week's episode of the podcast, freeCodeCamp founder Quincy Larson interviews Joe Attardi. He's a software engineer and prolific author of programming books.
+У цьому епізоді подкасту засновник freeCodeCamp Квінсі Ларсон бере інтерв'ю у Джо Атарді. Він є програмістом і плодовитим автором книг з програмування.
 
 <!-- more -->
 
-We talk about:
+Ми говоримо про:
 
--   How software development has changed over the past 21 years
+-   Як розробка програмного забезпечення змінилася за останні 21 рік
     
--   Tips for suriving AI's sweeping changes to the field
+-   Поради з виживання в умовах масштабних змін внаслідок впровадження ШІ
     
--   The evolving role of Computer Science degrees
+-   Еволюціонуюча роль ступенів в галузі комп'ютерних наук
     
--   Why people should still read O'Reilly style programming books on dead trees
-    
-
-Links we talk about during our conversation:
-
--   Joe's freeCodeCamp books and tutorials: [https://www.freecodecamp.org/news/author/joeattardi/][1]
-    
--   Joe's website: [https://joeattardi.com/][2]
-    
--   Joe's Web API Cookbook: [https://www.webapis.info/][3]
-    
--   Joe's open source projects on GitHub: [https://github.com/joeattardi][4]
-    
--   What Joe's desk looks like: [https://x.com/JoeAttardi/status/1849819837360480658][5]
-    
--   Some games Joe's recently played: [https://backloggd.com/u/jattardi/games?page=1][6]
+-   Чому людям все ще слід читати програмістські книги в стилі O'Reilly на паперових носіях
     
 
-You can watch the interview on YouTube:
+Посилання, про які ми говоримо під час нашої розмови:
+
+-   Книги та навчальні посібники Джо на freeCodeCamp: [https://www.freecodecamp.org/news/author/joeattardi/][1]
+    
+-   Вебсайт Джо: [https://joeattardi.com/][2]
+    
+-   Кулінарна книга Web API Джо: [https://www.webapis.info/][3]
+    
+-   Проекты з відкритим кодом Джо на GitHub: [https://github.com/joeattardi][4]
+    
+-   Як виглядає робочий стіл Джо: [https://x.com/JoeAttardi/status/1849819837360480658][5]
+    
+-   Деякі ігри, в які Джо нещодавно грав: [https://backloggd.com/u/jattardi/games?page=1][6]
+    
+
+Ви можете переглянути інтерв'ю на YouTube:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/07NdHM6pE6M" style="aspect-ratio: 16 / 9; width: 100%; height: auto;" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy"></iframe>
 
-Or you can listen to the podcast in Apple Podcasts, Spotify, or your favorite podcast app. Be sure to follow the freeCodeCamp Podcast there so you'll get new episodes each Friday.
+Або ви можете слухати подкаст в Apple Podcasts, Spotify або у вашому улюбленому додатку для подкастів. Обов'язково підписуйтесь на freeCodeCamp Podcast там, щоб отримувати нові епізоди кожну п'ятницю.
 
 [1]: https://www.freecodecamp.org/news/author/joeattardi/
 [2]: https://joeattardi.com/
@@ -51,3 +50,5 @@ Or you can listen to the podcast in Apple Podcasts, Spotify, or your favorite po
 [4]: https://github.com/joeattardi
 [5]: https://x.com/JoeAttardi/status/1849819837360480658
 [6]: https://backloggd.com/u/jattardi/games?page=1
+```
+
