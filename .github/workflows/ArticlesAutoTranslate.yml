@@ -65,7 +65,7 @@ jobs:
           githubToken: '${{ github.token }}'
 
       # Step 6: Copy and add the fetched raw article to main branch (original and language-specific dirs)
-      - name: Push new article to main branch (safe push)
+      - name: Push new article to main branch (improved safe push)
         run: |
           MARKDOWN_FILE="${{ steps.fetch-webpage-to-markdown.outputs.markdown_file_path }}"
           FILENAME=$(basename "$MARKDOWN_FILE")
@@ -85,15 +85,26 @@ jobs:
             git add "./articles/$LANG/$FILENAME"
           fi
 
-          git commit -m "Save article markdown."
+          git commit -m "Save article markdown." || echo "No changes to commit."
 
-          # Safe push with retry logic
+          # Fetch remote and check if we are behind
+          git fetch origin main
+          LOCAL_SHA=$(git rev-parse HEAD)
+          REMOTE_SHA=$(git rev-parse origin/main)
+
+          if [ "$LOCAL_SHA" != "$REMOTE_SHA" ]; then
+            echo "Remote main is ahead. Rebasing..."
+            git pull --rebase origin main
+          fi
+
+          # Push with retry
           for i in 1 2 3; do
-            git pull --rebase origin main && git push origin main && break
-            echo "Push failed, retrying in 5 seconds..."
-            sleep 5
+            git push origin main && break || {
+              echo "Push failed (attempt $i). Retrying after pull..."
+              git pull --rebase origin main || true
+              sleep 5
+            }
           done
-
 
 
       # Step 7: Switch to auto-translate branch and merge latest from main to inherit directory structure
@@ -119,7 +130,7 @@ jobs:
           with_task_translate_to_save_path: './articles/{lang}/'
 
       # Step 9: Commit only the translated article to auto-translate branch (do not commit raw/)
-      - name: Commit translated article to auto-translate branch
+      - name: Commit translated article to auto-translate branch (improved safe push)
         run: |
           MARKDOWN_FILE="${{ steps.fetch-webpage-to-markdown.outputs.markdown_file_path }}"
           FILENAME=$(basename "$MARKDOWN_FILE")
@@ -128,17 +139,29 @@ jobs:
 
           if [ -f "$TRANSLATED_FILE" ]; then
             git add "$TRANSLATED_FILE"
-            git commit -m "Save auto-translated article markdown."
+            git commit -m "Save auto-translated article markdown." || echo "No changes to commit."
+
+            git fetch origin auto-translate
+            LOCAL_SHA=$(git rev-parse HEAD)
+            REMOTE_SHA=$(git rev-parse origin/auto-translate)
+
+            if [ "$LOCAL_SHA" != "$REMOTE_SHA" ]; then
+              echo "Remote auto-translate is ahead. Rebasing..."
+              git pull --rebase origin auto-translate
+            fi
 
             for i in 1 2 3; do
-              git pull --rebase origin auto-translate && git push origin auto-translate && break
-              echo "Retrying push to auto-translate ($i)..."
-              sleep 5
+              git push origin auto-translate && break || {
+                echo "Push failed (attempt $i). Retrying after pull..."
+                git pull --rebase origin auto-translate || true
+                sleep 5
+              }
             done
           else
             echo "Translated file not found: $TRANSLATED_FILE"
             exit 1
           fi
+
 
       # Step 10: Clean temporary directory from main branch again (after switching back)
       - name: Final cleanup of _tmp on main
