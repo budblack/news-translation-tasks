@@ -1,7 +1,7 @@
 ---
 title: "Rust VS Go VS TypeScript – which back end language is for you? With Tai
   Groot [Podcast #176]"
-date: 2025-07-15T14:12:28.975Z
+date: 2025-07-15T14:18:11.615Z
 author: Beau Carnes
 authorURL: https://www.freecodecamp.org/news/author/beaucarnes/
 originalURL: https://www.freecodecamp.org/news/rust-vs-go-vs-typescript-which-back-end-language-is-for-you-with-tai-groot-podcast-176/
