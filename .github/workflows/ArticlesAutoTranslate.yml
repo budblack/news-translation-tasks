@@ -15,30 +15,29 @@ jobs:
       issues: write
       contents: write
 
-    # 🚨 Concurrency lock: allow only one instance at a time
-    concurrency:
-      group: articles-auto-translate
-      cancel-in-progress: false
-
-    # Only run this job if the label is exactly 'auto'
-    if: ${{ github.event.label.name == 'auto' }}
-
     steps:
-      # Step 1: Check issue body
+      # 🚦 使用 turnstyle 队列锁，确保任务串行且不会被取消
+      - uses: softprops/turnstyle@v1
+        with:
+          poll-interval-seconds: 10  # 每 10 秒轮询一次是否锁可用
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Step 1: Check if the description of the issue is empty
       - name: Check if the description of the issue is empty
         if: ${{ !github.event.issue.body }}
         shell: bash
         run: echo "The description of the issue is empty." 1>&2; exit 1;
 
-      # Step 2: Extract language code
-      - name: Extract language code (e.g., [zh])
+      # Step 2: Extract language code (e.g., [zh] => zh)
+      - name: Extract language code
         id: extract-lang
         run: |
           ISSUE_TITLE="${{ github.event.issue.title }}"
           LANG_CODE=$(echo "$ISSUE_TITLE" | sed -E 's/^\[([a-zA-Z]+)\].*/\1/')
           echo "lang=$LANG_CODE" >> "$GITHUB_OUTPUT"
 
-      # Step 3: Checkout repo
+      # Step 3: Checkout the repository
       - uses: actions/checkout@v3
 
       # Step 4: Configure Git
@@ -148,7 +147,7 @@ jobs:
             exit 1
           fi
 
-      # Step 11: Final cleanup
+      # Step 11: Final cleanup of _tmp directory
       - name: Final cleanup of _tmp on main
         run: |
           git checkout main
