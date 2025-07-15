@@ -1,5 +1,5 @@
 ---
-title: "freeCodeCamp から NASA へ ― データエンジニア Joe Hill の旅【ポッドキャスト #178】"
+title: "freeCodeCamp から NASA へ — データエンジニア Joe Hill の道 [Podcast #178]"
 date: 2025-07-15T14:12:03.860Z
 author: Beau Carnes
 authorURL: https://www.freecodecamp.org/news/author/beaucarnes/
@@ -8,32 +8,37 @@ posteditor: ""
 proofreader: ""
 ---
 
-今週のポッドキャストエピソードでは、freeCodeCamp の創設者 Quincy Larson が Joe Hill にインタビューを行いました。彼は NASA のデータプラットフォームで働くソフトウェアエンジニアです。
+今週のポッドキャストでは、freeCodeCamp の創設者 Quincy Larson が Joe Hill にインタビューします。彼は NASA のデータプラットフォームで働くソフトウェアエンジニアです。
 
 <!-- more -->
 
-Joe は清掃員として働きながら 4 年間、独学でプログラミングを学びました。自閉症を持つ 2 人の息子を持つシングルファーザーである彼は、まず彼らが言葉を学ぶのを助けるために iPad アプリを開発しました。
+Joe は 4 年間独学でプログラミングを学びつつ、清掃員として働いていました。自閉症の息子 2 人を持つシングルファーザーとして、彼は最初にプログラミングスキルを活用し、息子たちが会話を学ぶための iPad アプリを開発しました。
 
-インタビューでは、以下の話題について取り上げています：
+今回のエピソードでは以下のトピックについて話します：
 
-- データエンジニアリングと国防総省のデータを中央プラットフォームに統合する方法
-- 大規模な組織で物事を進めるための対人スキルの重要性
-- 自己学習における忍耐と実践の必要性
-- ツールを片っ端から移り変わることをやめ、深掘りする方法
-- 自閉症の子供を育てる親へのアドバイス
+- データエンジニアリング、そして国防総省のデータを中央プラットフォームに統合する方法
 
-インタビューの様子は YouTube で視聴可能です：
+- 大規模な組織での成果を上げるためのソフトスキルの役割
+
+- 独学における忍耐と練習の重要性
+
+- ツールを転々とするのをやめ、より深く掘り下げる方法
+
+- 自閉症の子どもを育てる親へのアドバイス
+
+このインタビューは YouTube で視聴することができます。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cMOz7Tyq7aE" style="aspect-ratio: 16 / 9; width: 100%; height: auto;" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy"></iframe>
 
-また、このポッドキャストを Apple Podcasts、Spotify、またはお好きなポッドキャストアプリで聴くことができます。freeCodeCamp ポッドキャストをフォローして、毎週金曜日に配信される新エピソードをお楽しみください。
+また、Apple Podcasts や Spotify など、お好きなポッドキャストアプリで聴くこともできます。毎週金曜日に最新エピソードをお届けする freeCodeCamp Podcast をぜひフォローしてください。
 
-freeCodeCamp の活動を月額寄付で支援している 11,384 人の心優しい方々に感謝します。この素晴らしいコミュニティに参加することで、私たちの慈善活動のミッションに貢献することが可能です。詳細は [https://www.donate.freecodecamp.org][1] をご覧ください。
+毎月の寄付で freeCodeCamp を支援してくださっている 11,384 人の皆さんに感謝します。あなたもぜひこれらサポーターとともに私たちのチャリティーのミッションを支援してみませんか？詳しくは [https://www.donate.freecodecamp.org][1] をご覧ください。
 
-インタビュー内で言及したリンク：
+インタビュー内で話題に上がったリンク：
 
-- 1992 年のクラシックハッキング映画『スニーカーズ』の予告編: [https://www.youtube.com/watch?v=NEhgUxQ322A][2]
-- LinkedIn での Joe のプロフィール: [https://www.linkedin.com/in/joe-hill-4a138123/][3]
+- 1992 年のクラシックハッキング映画「スニーカーズ」のトレーラー: [https://www.youtube.com/watch?v=NEhgUxQ322A][2]
+
+- Joe の LinkedIn プロファイル: [https://www.linkedin.com/in/joe-hill-4a138123/][3]
 
 [1]: https://www.donate.freecodecamp.org
 [2]: https://www.youtube.com/watch?v=NEhgUxQ322A%EF%BF%BC-
