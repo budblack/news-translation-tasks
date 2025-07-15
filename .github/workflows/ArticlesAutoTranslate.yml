@@ -69,7 +69,7 @@ jobs:
           markDownFilePath: './articles/_tmp/'
           githubToken: '${{ github.token }}'
 
-      # Step 7: Push raw article to main (safe push with rebase)
+      # Step 7: Push raw article to main (safe push with auto stash)
       - name: Push new article to main branch
         run: |
           MARKDOWN_FILE="${{ steps.fetch-webpage-to-markdown.outputs.markdown_file_path }}"
@@ -90,12 +90,23 @@ jobs:
           git commit -m "Save article markdown." || echo "No changes to commit."
 
           git fetch origin main
-          git pull --rebase origin main || true
+
+          # 🛡 自动检测脏状态并 stash
+          if ! git diff --quiet || ! git diff --cached --quiet; then
+            echo "⚠️ Found unstaged changes, stashing them before rebase..."
+            git stash push -u -m "Auto-stash before rebase"
+            git pull --rebase origin main || true
+            echo "🔄 Applying stashed changes..."
+            git stash pop || true
+          else
+            git pull --rebase origin main || true
+          fi
 
           for i in 1 2 3; do
             git push origin main && break
             echo "Push failed. Retrying ($i)..."
             sleep 5
+            git fetch origin main
             git pull --rebase origin main || true
           done
 
@@ -134,12 +145,23 @@ jobs:
             git commit -m "Save auto-translated article markdown." || echo "No changes to commit."
 
             git fetch origin auto-translate
-            git pull --rebase origin auto-translate || true
+
+            # 🛡 自动检测脏状态并 stash
+            if ! git diff --quiet || ! git diff --cached --quiet; then
+              echo "⚠️ Found unstaged changes, stashing them before rebase..."
+              git stash push -u -m "Auto-stash before rebase"
+              git pull --rebase origin auto-translate || true
+              echo "🔄 Applying stashed changes..."
+              git stash pop || true
+            else
+              git pull --rebase origin auto-translate || true
+            fi
 
             for i in 1 2 3; do
               git push origin auto-translate && break
               echo "Push failed. Retrying ($i)..."
               sleep 5
+              git fetch origin auto-translate
               git pull --rebase origin auto-translate || true
             done
           else
@@ -159,12 +181,23 @@ jobs:
             git commit -m "Remove _tmp directory." || echo "No changes to commit."
 
             git fetch origin main
-            git pull --rebase origin main || true
+
+            # 🛡 自动检测脏状态并 stash
+            if ! git diff --quiet || ! git diff --cached --quiet; then
+              echo "⚠️ Found unstaged changes, stashing them before rebase..."
+              git stash push -u -m "Auto-stash before rebase"
+              git pull --rebase origin main || true
+              echo "🔄 Applying stashed changes..."
+              git stash pop || true
+            else
+              git pull --rebase origin main || true
+            fi
 
             for i in 1 2 3; do
               git push origin main && break
               echo "Push failed. Retrying ($i)..."
               sleep 5
+              git fetch origin main
               git pull --rebase origin main || true
             done
           else
