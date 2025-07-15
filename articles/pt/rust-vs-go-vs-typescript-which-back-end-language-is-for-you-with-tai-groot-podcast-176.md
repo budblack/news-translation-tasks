@@ -1,6 +1,5 @@
 ---
-title: "Rust VS Go VS TypeScript – which back end language is for you? With Tai
-  Groot [Podcast #176]"
+title: "Rust VS Go VS TypeScript – qual linguagem de back end é para você? Com Tai Groot [Podcast #176]"
 date: 2025-07-15T14:12:28.975Z
 author: Beau Carnes
 authorURL: https://www.freecodecamp.org/news/author/beaucarnes/
@@ -9,42 +8,42 @@ posteditor: ""
 proofreader: ""
 ---
 
-On this week's episode of the podcast, freeCodeCamp founder Quincy Larson interviews Tai Groot. He's a back end software engineer and maintains an open source project used by companies like Google.
+No episódio desta semana do podcast, o fundador do freeCodeCamp Quincy Larson entrevista Tai Groot. Ele é engenheiro de software de back end e mantém um projeto open source usado por empresas como o Google.
 
 <!-- more -->
 
-For the first half of the interview we talk about back end programming languages. Then he shares tips for running learning back end development and running your own developer consultancy.
+Na primeira metade da entrevista, falamos sobre linguagens de programação de back end. Em seguida, ele compartilha dicas para aprender desenvolvimento de back end e gerenciar sua própria consultoria de desenvolvedores.
 
-We talk about:
+Falamos sobre:
 
--   The Performance VS Developer Experience trade-offs of Rust, Go, and TypeScript
+-   As compensações entre Performance e Experiência do Desenvolvedor em Rust, Go e TypeScript
     
--   How to run a free open source project profitably
+-   Como gerenciar um projeto open source gratuito de forma lucrativa
     
--   How to mentor junior devs and ramp them up to work at your consultancy
+-   Como orientar desenvolvedores juniores e prepará-los para trabalhar na sua consultoria
     
--   Why he recommends devs learn Arch Linux
+-   Por que ele recomenda que desenvolvedores aprendam Arch Linux
     
 
-You can watch the interview on YouTube:
+Você pode assistir à entrevista no YouTube:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yDhCweudqyY" style="aspect-ratio: 16 / 9; width: 100%; height: auto;" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy"></iframe>
 
-Or you can listen to the podcast in Apple Podcasts, Spotify, or your favorite podcast app. Be sure to follow the freeCodeCamp Podcast there so you'll get new episodes each Friday.
+Ou você pode ouvir o podcast no Apple Podcasts, Spotify ou no seu aplicativo de podcast favorito. Certifique-se de seguir o Podcast do freeCodeCamp para receber novos episódios toda sexta-feira.
 
-Thanks to the 11,384 kind folks who support freeCodeCamp through a monthly donation. You can join these chill human beings and help our charity's mission by going to [https://www.donate.freecodecamp.org][1].
+Obrigado às 11.384 pessoas gentis que apoiam o freeCodeCamp através de uma doação mensal. Você pode se juntar a essas pessoas legais e ajudar na missão da nossa instituição de caridade acessando [https://www.donate.freecodecamp.org][1].
 
-Links we talk about during our conversation:
+Links que mencionamos durante nossa conversa:
 
--   Tai's website: [https://taigrr.com/][2]
+-   Website do Tai: [https://taigrr.com/][2]
     
--   Why Tai doesn't use Salt Stack anymore and how it inspired grlk: [https://taigrr.github.io/blog/so-long-salt-project/][3]
+-   Por que Tai não usa mais Salt Stack e como isso inspirou o grlk: [https://taigrr.github.io/blog/so-long-salt-project/][3]
     
--   The promise-breaking app: [https://bridgetime.net/][4]
+-   O aplicativo "promise-breaking": [https://bridgetime.net/][4]
     
--   freeCodeCamp's Arch Linux handbook: [https://www.freecodecamp.org/news/how-to-install-arch-linux/][5]
+-   Manual do freeCodeCamp sobre Arch Linux: [https://www.freecodecamp.org/news/how-to-install-arch-linux/][5]
     
--   The Arch wiki: [https://wiki.archlinux.org/title/Main\_page][6]
+-   A wiki do Arch: [https://wiki.archlinux.org/title/Main\_page][6]
     
 
 [1]: https:/www.donate.freecodecamp.xn--orgLinks-js49ba
@@ -53,3 +52,4 @@ Links we talk about during our conversation:
 [4]: https://bridgetime.net/%EF%BF%BC-
 [5]: https://www.freecodecamp.org/news/how-to-install-arch-linux/%EF%BF%BC-
 [6]: https://wiki.archlinux.org/title/Main_page
+
