@@ -1,6 +1,6 @@
 ---
 title: "From freeCodeCamp to NASA with Data Engineer Joe Hill [Podcast #178]"
-date: 2025-07-15T14:04:34.614Z
+date: 2025-07-15T14:12:03.860Z
 author: Beau Carnes
 authorURL: https://www.freecodecamp.org/news/author/beaucarnes/
 originalURL: https://www.freecodecamp.org/news/from-freecodecamp-to-nasa-with-data-engineer-joe-hill-podcast-178/
