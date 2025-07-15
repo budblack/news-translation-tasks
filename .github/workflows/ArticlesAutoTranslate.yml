@@ -15,6 +15,12 @@ jobs:
       issues: write
       contents: write
 
+    # 🚨 Concurrency lock: allow only one instance at a time
+    concurrency:
+      group: articles-auto-translate
+      cancel-in-progress: false
+
+    # Only run this job if the label is exactly 'auto'
     if: ${{ github.event.label.name == 'auto' }}
 
     steps:
