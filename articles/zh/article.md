@@ -1,52 +1,49 @@
-```markdown
 ---
-title: "从治疗师到六位数的自由职业开发者，Kelly Vaughn 的故事 [播客 #176]"
-date: 2025-07-15T14:38:14.498Z
+title: "799次被拒……但他还是得到了工作！Braydon Coyer开发者访谈 [播客#179]"
+date: 2025-07-15T14:39:24.475Z
 author: Beau Carnes
 authorURL: https://www.freecodecamp.org/news/author/beaucarnes/
-originalURL: https://www.freecodecamp.org/news/from-therapist-to-six-figure-freelance-dev-podcast-176/
+originalURL: https://www.freecodecamp.org/news/799-rejections-but-he-got-the-job-braydon-coyer-developer-interview-podcast-179/
 posteditor: ""
 proofreader: ""
 ---
 
-在本周的播客节目中，freeCodeCamp 的创始人 Quincy Larson 采访了 Kelly Vaughn。她是一个自学成才的软件工程师，曾经营自己的开发企业。她还是一家金融科技初创公司的首任 CTO。Kelly 还运营着专注于科技女性的热门 Ladybug 播客。
+在本周的播客节目中，freeCodeCamp创始人Quincy Larson采访了Braydon Coyer。他是一名软件工程师，从高中开始就开发移动应用，其中一款应用甚至在几天内超过了《愤怒的小鸟》的销量。在获得了第一个Web开发者职位后，他辍学了计算机科学学位课程，并且再也没有回去。
 
 <!-- more -->
 
 我们讨论了：
 
--   如何从事自由职业，最终创建一个开发者公司并获得客户
+-   移动应用开发 VS Web应用开发
     
--   应对当前开发者就业市场的技巧
+-   申请开发者职位的策略
     
--   如何从自由职业转向为他人工作
+-   计算机科学学位到底有多大用处？
     
--   识别倦怠的技巧，这样你就可以知道何时需要休息
-    
-
-你可以在 YouTube 上观看这次采访：
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NCvKYoTeJR0" style="aspect-ratio: 16 / 9; width: 100%; height: auto;" title="YouTube 视频播放器" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy"></iframe>
-
-或者你可以在 Apple Podcasts、Spotify 或你喜欢的播客应用中收听本次节目。一定要在这些平台上关注 freeCodeCamp 播客，这样你每周五就能收到新节目。
-
-感谢 11,384 位通过每月捐赠支持 freeCodeCamp 的朋友。你也可以加入这些友善的人们，并通过访问 [donate.freecodecamp.org][1] 帮助我们的慈善使命。
-
-在谈话中提到的链接：
-
--   Kelly 的网站: [https://kvlly.com][2]
-    
--   Ladybug 播客由科技女性引导，讨论技术、职业和代码: [https://ladybug.dev][3]
-    
--   Kelly 的工程领导力新闻简报: [https://modernleader.is][4]
-    
--   Kelly 的新聚焦于倦怠主题的新闻简报: [https://afterburnout.co][5]
+-   将AI整合到开发者工作流中的合理方法
     
 
-[1]: https://www.donate.freecodecamp.org
-[2]: https://kvlly.com
-[3]: https://ladybug.dev
-[4]: https://modernleader.is
-[5]: https://afterburnout.co
-```
+你可以在YouTube上观看这次访谈：
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ilotANpzN7I" style="aspect-ratio: 16 / 9; width: 100%; height: auto;" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy"></iframe>
+
+或者你可以在Apple Podcasts、Spotify或你喜欢的播客应用中收听这期节目。一定要在那里关注freeCodeCamp Podcast，这样你就可以在每周五收到新剧集。
+
+感谢11,384名通过每月捐款支持freeCodeCamp的善良人们。你可以通过访问[https://www.donate.freecodecamp.org][1]加入这些悠闲的人们，帮助我们的慈善使命。
+
+在我们的对话中提到的链接：
+
+-   Braydon的超赞定制网站: [https://www.braydoncoyer.dev/][2]
+    
+-   《水果忍者》游戏开发纪录片:
+    
+-   Braydon在Mac上用来自动化流程的Raycast工具: [https://www.raycast.com/][3]
+    
+-   Braydon使用的Tana记笔记工具: [https://tana.inc/][4]
+    
+
+[1]: https:/www.donate.freecodecamp.xn--orgLinks-js49ba
+[2]: https://www.braydoncoyer.dev/%EF%BF%BC-
+[3]: https://www.raycast.com/%EF%BF%BC-
+[4]: https://tana.inc/
 
