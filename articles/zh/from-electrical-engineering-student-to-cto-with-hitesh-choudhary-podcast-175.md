@@ -1,6 +1,6 @@
+```markdown
 ---
-title: "From electrical engineering student to CTO with Hitesh Choudhary
-  [Podcast #175]"
+title: "从电气工程学生到首席技术官，与 Hitesh Choudhary 的对话 [播客 #175]"
 date: 2025-07-15T14:13:52.293Z
 author: Beau Carnes
 authorURL: https://www.freecodecamp.org/news/author/beaucarnes/
@@ -9,43 +9,45 @@ posteditor: ""
 proofreader: ""
 ---
 
-On this week's episode of the podcast, freeCodeCamp founder Quincy Larson interviews former CTO and prolific programming teacher Hitesh Choudhary.
+在本周的播客节目中，freeCodeCamp 的创始人 Quincy Larson 采访了前 CTO 和高产的编程教师 Hitesh Choudhary。
 
 <!-- more -->
 
-We talk about:
+我们讨论了：
 
--   The limits of AI in building a robust codebase
+-   AI 在构建稳健代码库中的局限性
     
--   Time management
+-   时间管理
     
--   Higher Education in India
+-   印度的高等教育
     
--   Lessons from training developers
+-   培训开发者的经验教训
     
--   Lessons you've learned from your travel
+-   旅行中学到的经验
     
 
-You can watch the interview on YouTube:
+你可以在 YouTube 上观看此采访：
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7bS52JVHEk0" style="aspect-ratio: 16 / 9; width: 100%; height: auto;" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7bS52JVHEk0" style="aspect-ratio: 16 / 9; width: 100%; height: auto;" title="YouTube 视频播放器" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy"></iframe>
 
-Or you can listen to the podcast in Apple Podcasts, Spotify, or your favorite podcast app. Be sure to follow the freeCodeCamp Podcast there so you'll get new episodes each Friday.
+或者你可以在 Apple Podcasts、Spotify 或你喜欢的播客应用中收听。请务必关注 freeCodeCamp 播客，以便每周五收到新的一集。
 
-Thanks to the 11,384 kind folks who support freeCodeCamp through a monthly donation. You can join these chill human beings and help our charity's mission by going to https://www.donate.freecodecamp.org
+感谢 11,384 位通过月捐支持 freeCodeCamp 的善良人士。你可以通过访问 https://www.donate.freecodecamp.org 加入这些平和的好人，帮助我们的慈善使命。
 
-Links we talk about during our conversation:
+我们在谈话中提到的链接：
 
--   Hitesh's TypeScript course on freeCodeCamp: [https://www.freecodecamp.org/news/programming-in-typescript/][1]
+-   Hitesh 在 freeCodeCamp 上的 TypeScript 课程：[https://www.freecodecamp.org/news/programming-in-typescript/][1]
     
--   Hitesh's project-oriented Appwrite course on freeCodeCamp [https://www.freecodecamp.org/news/comprehensive-full-stack-react-with-appwrite-tutorial/][2]
+-   Hitesh 的面向项目的 Appwrite 课程：[https://www.freecodecamp.org/news/comprehensive-full-stack-react-with-appwrite-tutorial/][2]
     
--   Hitesh's Git course on freeCodeCamp: [https://www.freecodecamp.org/news/learn-git-in-detail-to-manage-your-code/][3]
+-   Hitesh 在 freeCodeCamp 上的 Git 课程：[https://www.freecodecamp.org/news/learn-git-in-detail-to-manage-your-code/][3]
     
--   Hitesh's TED talk on time management: [https://www.youtube.com/watch?v=s1KrFy\_3LYQ][4]
+-   Hitesh 的 TED 时间管理讲座：[https://www.youtube.com/watch?v=s1KrFy\_3LYQ][4]
     
 
 [1]: https://www.freecodecamp.org/news/programming-in-typescript/￼-
 [2]: https://www.freecodecamp.org/news/comprehensive-full-stack-react-with-appwrite-tutorial/￼-
 [3]: https://www.freecodecamp.org/news/learn-git-in-detail-to-manage-your-code/￼-
 [4]: https://www.youtube.com/watch?v=s1KrFy_3LYQ
+```
+
