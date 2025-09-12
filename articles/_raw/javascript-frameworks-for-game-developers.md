@@ -1,6 +1,6 @@
 ---
 title: Powerful JavaScript Frameworks for Game Developers
-date: 2025-09-12T15:48:07.399Z
+date: 2025-09-12T15:54:32.710Z
 author: Manish Shivanandhan
 authorURL: https://www.freecodecamp.org/news/author/manishshivanandhan/
 originalURL: https://www.freecodecamp.org/news/javascript-frameworks-for-game-developers/
