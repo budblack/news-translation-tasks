@@ -213,7 +213,7 @@ jobs:
 
           git merge --strategy=recursive --strategy-option=theirs main || true
 
-      ### Auto-translate article (use secure path)
+      ### Auto-translate article (use original file path for consistency)
       - name: Translate article
         uses: freeCodeCamp/articles-auto-translate-action@main
         with:
@@ -221,7 +221,7 @@ jobs:
           with_issue_body: "${{ github.event.issue.body }}"
           with_label_name: "${{ github.event.label.name }}"
           with_github_token: "${{ github.token }}"
-          with_original_markdown_file_path: "${{ steps.backup-md.outputs.path }}"
+          with_original_markdown_file_path: "${{ steps.fetch.outputs.markdown_file_path }}"
           with_task_fetch_to_save_path: "./articles/_raw/"
           with_task_translate_openai_api_key: "${{ secrets.OPENAI_API_KEY }}"
           with_task_translate_to_save_path: "./articles/{lang}/"
@@ -229,7 +229,8 @@ jobs:
       ### Commit translated file
       - name: Commit translated article
         run: |
-          base=$(basename "$BACKUP_PATH")
+          original_file="${{ steps.fetch.outputs.markdown_file_path }}"
+          filename=$(basename "$original_file")
           lang="${{ env.LANG_CODE }}"
           
           # Validate language code again
@@ -238,9 +239,8 @@ jobs:
             exit 1
           fi
           
-          # Remove timestamp prefix from filename for final path
-          clean_filename=$(echo "$base" | sed 's/^[0-9]\{8\}_[0-9]\{6\}_//')
-          translated="./articles/$lang/$clean_filename"
+          # Use original filename for consistency
+          translated="./articles/$lang/$filename"
           
           # Validate translated file path (more flexible regex)
           if [[ ! "$translated" =~ ^\.?/?articles/[a-zA-Z]{2,3}/[a-zA-Z0-9_-]+\.md$ ]]; then
@@ -251,7 +251,7 @@ jobs:
           [ -f "$translated" ] || { echo "Translated file missing."; exit 1; }
 
           git add "$translated"
-          git commit -m "Add translated article: $clean_filename" || echo "Nothing to commit."
+          git commit -m "Add translated article: $filename" || echo "Nothing to commit."
 
           git fetch origin auto-translate
 
@@ -278,7 +278,7 @@ jobs:
           fi
           
           # Clean up backup files
-          if [ -f "$BACKUP_PATH" ]; then
+          if [ -n "$BACKUP_PATH" ] && [ -f "$BACKUP_PATH" ]; then
             rm -f "$BACKUP_PATH"
           fi
           
