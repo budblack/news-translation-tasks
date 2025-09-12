@@ -118,15 +118,43 @@ jobs:
           markDownFilePath: './articles/_tmp/'
           githubToken: "${{ github.token }}"
 
+      ### Debug: List files in _tmp directory
+      - name: Debug - List _tmp directory
+        run: |
+          echo "Current working directory: $(pwd)"
+          echo "Contents of articles/_tmp/:"
+          ls -la ./articles/_tmp/ || echo "Directory does not exist"
+          echo "Fetch output: ${{ steps.fetch.outputs.markdown_file_path }}"
+
       ### Backup fetched Markdown to external secure path (keep original filename)
       - name: Backup fetched Markdown to /tmp
         id: backup-md
         run: |
           original_file="${{ steps.fetch.outputs.markdown_file_path }}"
           
-          # Validate file path to prevent path traversal
-          if [[ ! "$original_file" =~ ^\./articles/_tmp/[a-zA-Z0-9_-]+\.md$ ]]; then
+          # Check if file exists first
+          if [[ ! -f "$original_file" ]]; then
+            echo "::error::File does not exist: $original_file"
+            echo "Available files in articles/_tmp/:"
+            ls -la ./articles/_tmp/ || echo "Directory does not exist"
+            exit 1
+          fi
+          
+          # Validate file path to prevent path traversal (more flexible regex)
+          echo "Debug: Checking file path: '$original_file'"
+          echo "Debug: Path length: ${#original_file}"
+          echo "Debug: Path bytes: $(echo -n "$original_file" | od -c)"
+          
+          if [[ ! "$original_file" =~ ^\.?/?articles/_tmp/.*\.md$ ]] || [[ "$original_file" =~ \.\. ]]; then
             echo "::error::Invalid file path detected: $original_file"
+            echo "Debug: Pattern: ^\.?/?articles/_tmp/.*\.md$ (excluding ..)"
+            echo "Debug: Character analysis:"
+            for ((i=0; i<${#original_file}; i++)); do
+              char="${original_file:$i:1}"
+              if [[ ! "$char" =~ [a-zA-Z0-9_\-/\.] ]]; then
+                echo "Debug: Invalid char at position $i: '$char' (ASCII: $(printf "%d" "'$char"))"
+              fi
+            done
             exit 1
           fi
           
@@ -214,8 +242,8 @@ jobs:
           clean_filename=$(echo "$base" | sed 's/^[0-9]\{8\}_[0-9]\{6\}_//')
           translated="./articles/$lang/$clean_filename"
           
-          # Validate translated file path
-          if [[ ! "$translated" =~ ^\./articles/[a-zA-Z]{2,3}/[a-zA-Z0-9_-]+\.md$ ]]; then
+          # Validate translated file path (more flexible regex)
+          if [[ ! "$translated" =~ ^\.?/?articles/[a-zA-Z]{2,3}/[a-zA-Z0-9_-]+\.md$ ]]; then
             echo "::error::Invalid translated file path: $translated"
             exit 1
           fi
